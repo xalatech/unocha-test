@@ -29,5 +29,19 @@
   }, {
     "firstName": "Nolana",
     "lastName": "Drache"
+  }],
+  
+  "team": [{
+    "name": "Xala",
+    "leader": "1"
+  }, {
+    "name": "Rana",
+    "leader": "2"
+  }, {
+    "name": "Altran",
+    "leader": "3"
+  }, {
+    "name": "Football",
+    "leader": "4"
   }]
 }

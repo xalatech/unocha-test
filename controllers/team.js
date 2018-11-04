@@ -90,8 +90,6 @@ exports.update = async (req, res, next) => {
 
 // Add team members
 exports.addMembers = async (member, req, res, next) => {
- console.log(member);
-
   try {
     const teamMember = await models.teamMember.create(member);
   } catch (err) {
