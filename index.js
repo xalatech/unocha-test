@@ -16,6 +16,7 @@ server.use(restify.plugins.bodyParser());
 const home = require('./controllers/home');
 const employee = require('./controllers/employee');
 const team = require('./controllers/team');
+const teamMember = require('./controllers/teamMember');
 
 server.get('/', home.home);
 
@@ -31,6 +32,13 @@ server.get('/team/:id', team.get);
 server.post('/team', team.create);
 server.put('/team/:id', team.update);
 server.del('/team/:id', team.remove);
+
+
+// Team members endpoints
+server.get('/teamMember', teamMember.getAll);
+server.get('/teamMember/:id', teamMember.get);
+server.post('/teamMember', teamMember.create);
+server.del('/teamMember/:id', teamMember.remove);
 
 server.listen(process.env.PORT || 4000, process.env.URL || '127.0.0.1', () => {
   console.log(`${package.name}@${package.version} listening at ${server.url}`);
