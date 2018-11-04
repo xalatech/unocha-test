@@ -4,9 +4,6 @@ const package = require('../package.json');
 
 const base = `http://${process.env.URL || '127.0.0.1'}:${process.env.PORT || 4000}/`;
 
-//Add Employee crud endpoints
-const employees = `http://${process.env.URL || '127.0.0.1'}:${process.env.PORT || 4000}/employee`;
-
 describe('Home', () => {
   it('should be reachable', (done) => {
     request.get(base, function(error, response, body) {
